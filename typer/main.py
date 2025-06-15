@@ -351,8 +351,7 @@ def get_group(typer_instance: Typer) -> TyperGroup:
 
 
 def get_command(typer_instance: Typer) -> click.Command:
-    if typer_instance._add_completion:
-        click_install_param, click_show_param = get_install_completion_arguments()
+    click_install_param, click_show_param = get_install_completion_arguments()
     if (
         typer_instance.registered_callback
         or typer_instance.info.callback
